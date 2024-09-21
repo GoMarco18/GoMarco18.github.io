@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+</head>
+<body>
+    <h1>Grade Calculator</h1>
+
+    <!-- Form to input the Prelim grade -->
+    <form method="POST">
+        <label for="prelim_grade">Enter your Prelim grade (0-100):</label>
+        <input type="number" id="prelim_grade" name="prelim_grade" min="0" max="100" required>
+        <button type="submit">Calculate</button>
+    </form>
+
+    <!-- Display result -->
+    {% if result %}
+        <h2>{{ result }}</h2>
+    {% endif %}
+
+    <!-- Display error -->
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
